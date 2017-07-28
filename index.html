@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script>
-            window.navigation = {
+            window.navigationData = {
                 tree: {
                     0: [1, 2],
                     3: [4, 5, 6, 7],
@@ -60,6 +60,9 @@
                 ]
             }
         </script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -67,9 +70,6 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <nav id="navigation">Whoops! Navigation is missing.</nav>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <div id="navigation" class="navigation-region">Whoops! Navigation is missing.</div>
     </body>
 </html>
