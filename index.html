@@ -60,9 +60,6 @@
                 ]
             }
         </script>
-
-        <script src="js/plugins.js"></script>
-
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -70,7 +67,117 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="navigation" class="navigation-region">Whoops! Navigation is missing.</div>
+        <div id="navigation" class="navigation-region">
+            <nav>
+                <ul
+                    aria-label="Главное меню Сбербанк Онлайн"
+                    role="menubar"
+                >
+                    <li role="menuitem"><a title="Главная" href="#">Главная</a></li>
+                    <li role="menuitem"><a title="Переводы и платежи" href="#">Переводы и платежи</a></li>
+                    <li role="menuitem"><a title="Карты" href="#">Карты</a></li>
+                    <li role="menuitem"><a title="Вклады и счета" href="#">Вклады и счета</a></li>
+                    <li role="menuitem"><a title="Кредиты" href="#">Кредиты</a></li>
+                    <li
+                        role="menuitem"
+                        aria-haspopup="true"
+                        id="products"
+                    >
+                        <button type="button" id="products-button" class="dropdown" aria-expanded="false">Все сервисы</button>
+                        <section id="products-dashboard" class="dashboard hidden" aria-hidden="true">
+                            <div class="search-wrapper">
+                                <label><input tabindex="-1" type="text" aria-hidden="true" placeholder="Введите название сервиса" /></label>
+                                <p id="search-tip">Например: <span>Виртуальная карта</span></p>
+                            </div>
+                            <div class="last-products">
+
+                            </div>
+                            <div id="catalog" class="catalog-region">
+                                <h3 id="catalog-title">Каталог</h3>
+                                <div role="tablist" aria-label="Каталог продуктов">
+                                    <button
+                                        type="button"
+                                        role="tab"
+                                        aria-label="Переводы и платежи"
+                                        aria-selected="false"
+                                        aria-controls="catalog-product-tab-0"
+                                        id="catalog-product-0"
+                                        class="catalog-tab"
+                                    >
+                                        Переводы и платежи
+                                    </button>
+                                    <button
+                                        type="button"
+                                        role="tab"
+                                        aria-label="Карты"
+                                        aria-selected="false"
+                                        aria-controls="catalog-product-tab-1"
+                                        id="catalog-product-1"
+                                        class="catalog-tab"
+                                    >
+                                        Карты
+                                    </button>
+                                    <button
+                                        type="button"
+                                        role="tab"
+                                        aria-label="Кредиты"
+                                        aria-selected="false"
+                                        aria-controls="catalog-product-tab-2"
+                                        id="catalog-product-2"
+                                        class="catalog-tab"
+                                    >
+                                        Кредиты
+                                    </button>
+                                </div>
+                                <div>
+                                    <div
+                                        class="catalog-tab-panel"
+                                        role="tabpanel"
+                                        id="catalog-product-tab-0"
+                                        aria-labelledby="catalog-product-0"
+                                    >
+                                        <h4>Переводы и платежи</h4>
+                                        <ul>
+                                            <li><a href="#">Перевод 1</a></li>
+                                            <li><a href="#">Перевод 2</a></li>
+                                            <li><a href="#">Перевод 3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="catalog-tab-panel hidden"
+                                        role="tabpanel"
+                                        id="catalog-product-tab-1"
+                                        aria-labelledby="catalog-product-1"
+                                    >
+                                        <h4>Карты</h4>
+                                        <ul>
+                                            <li><a href="#">Карта 1</a></li>
+                                            <li><a href="#">Карта 2</a></li>
+                                            <li><a href="#">Карта 3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="catalog-tab-panel hidden"
+                                        role="tabpanel"
+                                        id="catalog-product-tab-2"
+                                        aria-labelledby="catalog-product-2"
+                                    >
+                                        <h4>Кредиты</h4>
+                                        <ul>
+                                            <li><a href="#">Кредиты 1</a></li>
+                                            <li><a href="#">Кредиты 2</a></li>
+                                            <li><a href="#">Кредиты 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button">Свернуть</button>
+                        </section>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
         <script src="js/main.js"></script>
     </body>
 </html>

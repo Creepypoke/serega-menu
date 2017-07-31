@@ -1,58 +1,60 @@
 (function (nav) {
+    var products = document.getElementById('products')
+    var productsButton = document.getElementById('products-button')
+    var productsDashboard = document.getElementById('products-dashboard')
 
-    var props = {
-        tree: nav.tree || null,
-        productsList: nav.productsList || null
-    }
-    this.state = {}
-
-    var noop = function () {
-    }
-
-    this.setState = function (newState, callback) {
-        newState = typeof newState === 'object' && newState !== null ? newState : {}
-        this.state = Object.assign(this.state, newState)
-
-        typeof callback === 'function' ? callback.apply(this) : void 0
-    }
-
-    this.createNode = function (tagName, attributes) {
-        attributes = attributes || {}
-        typeof tagName === 'string' ? void 0 : function () {
-            throw Error('Incorrect tag name in createNode method')
-        }
-        var node = document.createElement(tagName)
-
-        for (var property in attributes) {
-            if (attributes.hasOwnProperty(property)) {
-                node[property] = attributes[property]
+    function forEach(collection, handler) {
+        var index = 0
+        for (var k in collection) {
+            if (collection.hasOwnProperty(k)) {
+                handler(collection[k], index)
             }
         }
-
-        return node
     }
 
+    // IE8 polyfill
+    function addClickListener (element, handler) {
+        if (element.addEventListener === void 0) {
+            element.attachEvent('onclick', handler)
+        }
+        else {
+            element.addEventListener('click', handler)
+        }
+    }
 
-    /* Рендер */
+    function toggleDashboard () {
+        var isExpanded = productsDashboard.className.indexOf('hidden') !== -1
+        productsDashboard.className = isExpanded ? 'dashboard' : 'dashboard hidden'
+        productsDashboard.setAttribute('aria-hidden', !isExpanded)
+        productsButton.setAttribute('aria-expanded', isExpanded)
+    }
 
-    function createMenuItem (title, url, hasPopup) {
+    function selectTab (tabElement) {
+        console.log('selectTab')
+
+
+        var tabsList = document.getElementsByClassName('catalog-tab')
+        var tabPanel = document.getElementById(tabElement.getAttribute('aria-controls'))
+
+        forEach(tabsList, function(element) {
+            if (element !== tabElement) {
+                element.setAttribute('aria-selected', 'false')
+                var tabPanel = document.getElementById(element.getAttribute('aria-controls'))
+                tabPanel.className = 'catalog-tab-panel hidden'
+            }
+        })
+
+        tabElement.setAttribute('aria-selected', 'true')
+        tabPanel.className = 'catalog-tab-panel'
 
     }
 
+    addClickListener(productsButton, toggleDashboard)
 
-    var menuBar = this.createNode('nav', {
-        'aria-label': 'Главное меню Сбербанк Онлайн',
-        'role': 'menubar'
+    var tabsList = document.getElementsByClassName('catalog-tab')
 
+    forEach(tabsList, function(element) {
+        addClickListener(element, function() {selectTab(element)})
     })
-    var navigation = document.getElementById('navigation')
-    navigation.innerHTML = ''
-
-    this.setState({}, function (a, b) {
-        console.log(a + ' ' + b)
-    })
-
-
-    navigation.appendChild(menuBar)
 
 })(window.navigationData)
