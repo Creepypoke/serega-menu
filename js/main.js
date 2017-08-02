@@ -1,7 +1,23 @@
 (function (nav) {
     var products = document.getElementById('products')
     var productsButton = document.getElementById('products-button')
+    var productsDashboardButtonCLose = document.getElementById('products-dashboard-close')
     var productsDashboard = document.getElementById('products-dashboard')
+
+    var tabsList = document.getElementsByClassName('catalog-tab')
+    var tabListWrapper = document.querySelector('[role="tablist"]')
+    
+    var currentTab = 0
+
+    var keys = {
+        end: 35,
+        home: 36,
+        left: 37,
+        up: 38,
+        right: 39,
+        down: 40,
+        delete: 46
+    }
 
     function forEach(collection, handler) {
         var index = 0
@@ -26,13 +42,19 @@
         var isExpanded = productsDashboard.className.indexOf('hidden') !== -1
         productsDashboard.className = isExpanded ? 'dashboard' : 'dashboard hidden'
         productsDashboard.setAttribute('aria-hidden', !isExpanded)
+        productsDashboardButtonCLose.setAttribute('aria-expanded', !isExpanded)
         productsButton.setAttribute('aria-expanded', isExpanded)
     }
+    
+    function closeDashboard () {
+        productsDashboard.className = 'dashboard hidden'
+        productsDashboard.setAttribute('aria-hidden', true)
+        productsButton.setAttribute('aria-expanded', false)
+        productsDashboardButtonCLose.setAttribute('aria-expanded', false)
+        
+    }
 
-    function selectTab (tabElement) {
-        console.log('selectTab')
-
-
+    function activeTab (tabElement) {
         var tabsList = document.getElementsByClassName('catalog-tab')
         var tabPanel = document.getElementById(tabElement.getAttribute('aria-controls'))
 
@@ -50,11 +72,44 @@
     }
 
     addClickListener(productsButton, toggleDashboard)
-
-    var tabsList = document.getElementsByClassName('catalog-tab')
+    addClickListener(productsDashboardButtonCLose, closeDashboard)
 
     forEach(tabsList, function(element) {
-        addClickListener(element, function() {selectTab(element)})
+        addClickListener(element, function() { activeTab(element) })
     })
+
+    tabListWrapper.addEventListener('keyup', function(e) {
+        var key = e.keyCode
+
+        switch(key) {
+            case keys.right:
+                if (currentTab < tabsList.length - 1) {
+                    currentTab += 1
+                }
+                break
+            case keys.left:
+                if (currentTab > 0) {
+                    currentTab -= 1
+                }
+                break
+            case keys.end:
+                currentTab = tabsList.length - 1
+                break
+            case keys.home:
+                currentTab = 0
+                break
+            default:
+                return e.preventDefault()
+        }
+        
+        var currentTabElement = tabsList[currentTab]
+        if (currentTabElement !== void 0) {
+            activeTab(tabsList[currentTab])
+        }
+    })
+    
+    
+    
+    
 
 })(window.navigationData)

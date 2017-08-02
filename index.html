@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Тестирование меню Сбербанк Онлайн</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -94,8 +94,14 @@
                             </div>
                             <div id="catalog" class="catalog-region">
                                 <h3 id="catalog-title">Каталог</h3>
-                                <div role="tablist" aria-label="Каталог продуктов">
+                                <div
+                                    role="tablist"
+                                    aria-label="Каталог продуктов"
+                                    aria-orientation="vertical"
+                                    tabindex="0"
+                                >
                                     <button
+                                        tabindex="-1"
                                         type="button"
                                         role="tab"
                                         aria-label="Переводы и платежи"
@@ -107,6 +113,7 @@
                                         Переводы и платежи
                                     </button>
                                     <button
+                                        tabindex="-1"
                                         type="button"
                                         role="tab"
                                         aria-label="Карты"
@@ -118,6 +125,7 @@
                                         Карты
                                     </button>
                                     <button
+                                        tabindex="-1"
                                         type="button"
                                         role="tab"
                                         aria-label="Кредиты"
@@ -136,7 +144,7 @@
                                         id="catalog-product-tab-0"
                                         aria-labelledby="catalog-product-0"
                                     >
-                                        <h4>Переводы и платежи</h4>
+                                        <h4 id="catalog-tab-panel-title">Переводы и платежи</h4>
                                         <ul>
                                             <li><a href="#">Перевод 1</a></li>
                                             <li><a href="#">Перевод 2</a></li>
@@ -149,7 +157,7 @@
                                         id="catalog-product-tab-1"
                                         aria-labelledby="catalog-product-1"
                                     >
-                                        <h4>Карты</h4>
+                                        <h4 id="catalog-tab-panel-title">Карты</h4>
                                         <ul>
                                             <li><a href="#">Карта 1</a></li>
                                             <li><a href="#">Карта 2</a></li>
@@ -162,7 +170,7 @@
                                         id="catalog-product-tab-2"
                                         aria-labelledby="catalog-product-2"
                                     >
-                                        <h4>Кредиты</h4>
+                                        <h4 id="catalog-tab-panel-title">Кредиты</h4>
                                         <ul>
                                             <li><a href="#">Кредиты 1</a></li>
                                             <li><a href="#">Кредиты 2</a></li>
@@ -171,7 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="button">Свернуть</button>
+                            <button id="products-dashboard-close" type="button">Свернуть</button>
                         </section>
                     </li>
                 </ul>
