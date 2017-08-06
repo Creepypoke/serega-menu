@@ -3,9 +3,16 @@
     var productsButton = document.getElementById('products-button')
     var productsDashboardButtonClose = document.getElementById('products-dashboard-close')
     var productsDashboard = document.getElementById('products-dashboard')
+    var searchInput = document.getElementById('search-filter')
 
     var tabsList = document.getElementsByClassName('catalog-tab')
     var tabListWrapper = document.querySelector('[role="tablist"]')
+    
+    var productsTitleElements = document.querySelectorAll('.catalog-products-product a')
+    
+    var productsTitles = map(productsTitleElements, function (element, index) {
+        return element.innerHTML
+    })
 
     var currentTab = 0
 
@@ -24,8 +31,21 @@
         for (var k in collection) {
             if (collection.hasOwnProperty(k)) {
                 handler(collection[k], index)
+                index += 1
             }
         }
+    }
+    
+    function map(collection, handler) {
+        var index = 0
+        var results = []
+        for (var k in collection) {
+            if (collection.hasOwnProperty(k)) {
+                results.push(handler(collection[k], index))
+                index += 1
+            }
+        }
+        return results
     }
 
     // IE8 polyfill
@@ -124,6 +144,29 @@
     })
 
     tabListWrapper.addEventListener('keyup', changeTabFocus)
+    
+    searchInput.addEventListener('keyup', function (e) {
+        var searchInputValue = e.target.value.trim()
+        
+        var matched = new RegExp(`.*${searchInputValue}.*`, 'gi')
+        
+        
+        forEach(productsTitles, function(title, index) {
+            var isFounded = title.search(matched)
+            productsTitleElements[index].className = isFounded !== -1 ? '' : 'hidden'
+        })
+        console.log('-----------')
+        
+        // forEach(filteredElements, function (result, index) {
+        //     var element = productsTitleElements[index]
+        //     if (result) {
+        //         result.className = 'catalog-products-product'
+        //     }
+        //     else {
+        //         element.className = 'catalog-products-product hidden'
+        //     }
+        // })
+    })
     
     if (tabsList[0] !== void 0) {
         activeTab(tabsList[0], true)

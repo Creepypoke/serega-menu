@@ -84,6 +84,7 @@
                     <a class="menuitem" title="Кредиты" href="#"><span role="menuitem" class="menuitem-title">Кредиты</span></a>
                     <button
                         id="products-button"
+                        title="Прочее"
                         class="menuitem menuitem_dropdown"
                         type="button"
                         aria-haspopup="true"
@@ -96,7 +97,7 @@
             <section id="products-dashboard" class="dashboard hidden" aria-hidden="true">
                 <div class="dashboard-content">
                 <div class="search-region" aria-hidden="true">
-                    <label><input class="search-region-input" tabindex="0" type="text"placeholder="Например: Пакеты услуг" /></label>
+                    <label><input id="search-filter" class="search-region-input" tabindex="0" type="text"placeholder="Например: Пакеты услуг" /></label>
                     <p id="search-tip" class="search-region-tip"></p>
                 </div>
                 <div class="last-products">
@@ -226,33 +227,7 @@
                             id="catalog-product-tab-1"
                             aria-labelledby="catalog-product-1"
                         >
-                            <h4 class="catalog-product-title">Карты</h4>
-                            <ul>
-                                <li><a href="#">Карта 1</a></li>
-                                <li><a href="#">Карта 2</a></li>
-                                <li><a href="#">Карта 3</a></li>
-                            </ul>
-                        </div>
-                        <div
-                            class="catalog-tab-panel hidden"
-                            role="tabpanel"
-                            id="catalog-product-tab-2"
-                            aria-labelledby="catalog-product-2"
-                        >
-                            <h4 class="catalog-product-title">Кредиты</h4>
-                            <ul>
-                                <li><a href="#">Кредиты 1</a></li>
-                                <li><a href="#">Кредиты 2</a></li>
-                                <li><a href="#">Кредиты 3</a></li>
-                            </ul>
-                        </div>
-                        <div
-                            class="catalog-tab-panel hidden"
-                            role="tabpanel"
-                            id="catalog-product-tab-3"
-                            aria-labelledby="catalog-product-3"
-                        >
-                            <h4 class="catalog-product-title">Переводы и платежи</h4>
+                            <h4 class="catalog-product-title">Вклады и счета</h4>
                             <ul class="catalog-products-list">
                                 <li class="catalog-products-product"><a href="#">Перевод 1</a></li>
                                 <li class="catalog-products-product"><a href="#">Перевод 2</a></li>
@@ -262,8 +237,32 @@
                                 <li class="catalog-products-product"><a href="#">Перевод 3</a></li>
                                 <li class="catalog-products-product"><a href="#">Перевод 3</a></li>
                                 <li class="catalog-products-product"><a href="#">Перевод 3</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод 3</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод 3</a></li>
+                            </ul>
+                        </div>                        
+                        <div
+                            class="catalog-tab-panel hidden"
+                            role="tabpanel"
+                            id="catalog-product-tab-2"
+                            aria-labelledby="catalog-product-2"
+                        >
+                            <h4 class="catalog-product-title">Карты</h4>
+                            <ul>
+                                <li class="catalog-products-product"><a href="#">Карта 1</a></li>
+                                <li class="catalog-products-product"><a href="#">Карта 2</a></li>
+                                <li class="catalog-products-product"><a href="#">Карта 3</a></li>
+                            </ul>
+                        </div>
+                        <div
+                            class="catalog-tab-panel hidden"
+                            role="tabpanel"
+                            id="catalog-product-tab-3"
+                            aria-labelledby="catalog-product-3"
+                        >
+                            <h4 class="catalog-product-title">Кредиты</h4>
+                            <ul>
+                                <li class="catalog-products-product"><a href="#">Кредиты 1</a></li>
+                                <li class="catalog-products-product"><a href="#">Кредиты 2</a></li>
+                                <li class="catalog-products-product"><a href="#">Кредиты 3</a></li>
                             </ul>
                         </div>
                         <div
@@ -272,7 +271,7 @@
                             id="catalog-product-tab-4"
                             aria-labelledby="catalog-product-4"
                         >
-                            <h4 class="catalog-product-title">Переводы и платежи</h4>
+                            <h4 class="catalog-product-title">Госуслуги</h4>
                             <ul class="catalog-products-list">
                                 <li class="catalog-products-product"><a href="#">Перевод 1</a></li>
                                 <li class="catalog-products-product"><a href="#">Перевод 2</a></li>
@@ -292,7 +291,7 @@
                             id="catalog-product-tab-5"
                             aria-labelledby="catalog-product-5"
                         >
-                            <h4 class="catalog-product-title">Переводы и платежи</h4>
+                            <h4 class="catalog-product-title">Страхование</h4>
                             <ul class="catalog-products-list">
                                 <li class="catalog-products-product"><a href="#">Перевод 1</a></li>
                                 <li class="catalog-products-product"><a href="#">Перевод 2</a></li>
@@ -312,7 +311,7 @@
                             id="catalog-product-tab-6"
                             aria-labelledby="catalog-product-6"
                         >
-                            <h4 class="catalog-product-title">Переводы и платежи</h4>
+                            <h4 class="catalog-product-title">Инвестиции</h4>
                             <ul class="catalog-products-list">
                                 <li class="catalog-products-product"><a href="#">Перевод 1</a></li>
                                 <li class="catalog-products-product"><a href="#">Перевод 2</a></li>
