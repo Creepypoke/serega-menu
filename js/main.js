@@ -150,22 +150,11 @@
         
         var matched = new RegExp(`.*${searchInputValue}.*`, 'gi')
         
-        
         forEach(productsTitles, function(title, index) {
             var isFounded = title.search(matched)
             productsTitleElements[index].className = isFounded !== -1 ? '' : 'hidden'
         })
-        console.log('-----------')
-        
-        // forEach(filteredElements, function (result, index) {
-        //     var element = productsTitleElements[index]
-        //     if (result) {
-        //         result.className = 'catalog-products-product'
-        //     }
-        //     else {
-        //         element.className = 'catalog-products-product hidden'
-        //     }
-        // })
+
     })
     
     if (tabsList[0] !== void 0) {
