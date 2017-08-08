@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="ru">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -90,7 +90,7 @@
                         aria-haspopup="true"
                         aria-expanded="false"
                     >
-                        <span role="menuitem" class="menuitem-title">Прочее<img class="menuitem-title-icon" src="img/icon-arrow-down-white-100.svg"></img></span>
+                        <span role="menuitem" class="menuitem-title">Прочее</span>
                     </button>
                 </div>
             </nav>
@@ -104,7 +104,7 @@
 
                 </div>
                 <div id="catalog" class="catalog-region">
-                    <h3 id="catalog-title" class="catalog-region-title">Каталог</h3>
+                    <span id="catalog-title" class="catalog-region-title">Каталог</span>
                     <div
                         role="tablist"
                         aria-label="Каталог продуктов"
@@ -114,6 +114,7 @@
                     >
                         <button
                             tabindex="-1"
+                            title="Переводы и платежи"
                             type="button"
                             role="tab"
                             aria-label="Переводы и платежи"
@@ -122,10 +123,11 @@
                             id="catalog-product-0"
                             class="catalog-tab"
                         >
-                            Переводы и платежи
+                            <img src="img/1.svg" class="catalog-product-icon"></img>Переводы и платежи
                         </button>
                         <button
                             tabindex="-1"
+                            title="Вклады и счета"
                             type="button"
                             role="tab"
                             aria-label="Вклады и счета"
@@ -134,10 +136,11 @@
                             id="catalog-product-1"
                             class="catalog-tab"
                         >
-                            Вклады и счета
+                            <img src="img/2.svg" class="catalog-product-icon"></img>Вклады и счета
                         </button>
                         <button
                             tabindex="-1"
+                            title="Карты"
                             type="button"
                             role="tab"
                             aria-label="Карты"
@@ -146,10 +149,11 @@
                             id="catalog-product-2"
                             class="catalog-tab"
                         >
-                            Карты
+                            <img src="img/3.svg" class="catalog-product-icon"></img>Карты
                         </button>
                         <button
                             tabindex="-1"
+                            title="Кредиты"
                             type="button"
                             role="tab"
                             aria-label="Кредиты"
@@ -158,10 +162,11 @@
                             id="catalog-product-3"
                             class="catalog-tab"
                         >
-                            Кредиты
+                            <img src="img/4.svg" class="catalog-product-icon"></img>Кредиты
                         </button>
                         <button
                             tabindex="-1"
+                            title="Госуслуги"
                             type="button"
                             role="tab"
                             aria-label="Госуслуги"
@@ -170,10 +175,11 @@
                             id="catalog-product-4"
                             class="catalog-tab"
                         >
-                            Госуслуги
+                            <img src="img/5.svg" class="catalog-product-icon"></img>Госуслуги
                         </button>
                         <button
                             tabindex="-1"
+                            title="Страхование"
                             type="button"
                             role="tab"
                             aria-label="Страхование"
@@ -182,10 +188,11 @@
                             id="catalog-product-5"
                             class="catalog-tab"
                         >
-                            Страхование
+                            <img src="img/6.svg" class="catalog-product-icon"></img>Страхование
                         </button>
                         <button
                             tabindex="-1"
+                            title="Инвестиции"
                             type="button"
                             role="tab"
                             aria-label="Инвестиции"
@@ -194,7 +201,7 @@
                             id="catalog-product-6"
                             class="catalog-tab"
                         >
-                            Инвестиции
+                            <img src="img/7.svg" class="catalog-product-icon"></img>Инвестиции
                         </button>                        
                     </div>
                     <div
@@ -207,24 +214,24 @@
                             id="catalog-product-tab-0"
                             aria-labelledby="catalog-product-0"
                         >
-                            <a class="catalog-product-title" href="#">Переводы и платежи</a>
+                            <a class="catalog-product-title" data-insearch href="#">Переводы и платежи</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Переводы между своими счетами</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод клиенту Сбербанка</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод на карту в другом банке</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод на счет в Яндекс.Деньгах</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод организации</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод по реквизитам</a></li>
-                                <li class="catalog-products-product"><a href="#">Погашение кредита в Сбербанке</a></li>
-                                <li class="catalog-products-product"><a href="#">Погашение кредитов в другом банке</a></li>
-                                <li class="catalog-products-product"><a href="#">ЖКХ и домашний телефон</a></li>
-                                <li class="catalog-products-product"><a href="#">Мобильная связь</a></li>
-                                <li class="catalog-products-product"><a href="#">Обмен валюты</a></li>
-                                <li class="catalog-products-product"><a href="#">Образование</a></li>
-                                <li class="catalog-products-product"><a href="#">Отдых и путешествия</a></li>
-                                <li class="catalog-products-product"><a href="#">Страхование и инвестиции</a></li>
-                                <li class="catalog-products-product"><a href="#">Товары и услуги</a></li>
-                                <li class="catalog-products-product"><a href="#">Электронные товары и развлечения</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Переводы между своими счетами</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Перевод клиенту Сбербанка</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Перевод на карту в другом банке</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Перевод на счет в Яндекс.Деньгах</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Перевод организации</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Перевод по реквизитам</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Погашение кредита в Сбербанке</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Погашение кредитов в другом банке</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>ЖКХ и домашний телефон</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Мобильная связь</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Обмен валюты</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Образование</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Отдых и путешествия</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Страхование и инвестиции</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Товары и услуги</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Электронные товары и развлечения</a></li>
                             </ul>
                         </div>
                         <div
@@ -233,12 +240,12 @@
                             id="catalog-product-tab-1"
                             aria-labelledby="catalog-product-1"
                         >
-                            <a class="catalog-product-title" href="#">Вклады и счета</a>
+                            <a class="catalog-product-title" data-insearch href="#">Вклады и счета</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Открытие вклада</a></li>
-                                <li class="catalog-products-product"><a href="#">Закрытие вклада</a></li>
-                                <li class="catalog-products-product"><a href="#">Акционные вклады и счета</a></li>
-                                <li class="catalog-products-product"><a href="#">Вклад на ноль</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Открытие вклада</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Закрытие вклада</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Акционные вклады и счета</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Вклад на ноль</a></li>
                             </ul>
                         </div>                        
                         <div
@@ -247,18 +254,18 @@
                             id="catalog-product-tab-2"
                             aria-labelledby="catalog-product-2"
                         >
-                            <a class="catalog-product-title" href="#">Карты</a>
+                            <a class="catalog-product-title" data-insearch href="#">Карты</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Графическая выписка</a></li>
-                                <li class="catalog-products-product"><a href="#">Досрочный перевыпуск карты</a></li>
-                                <li class="catalog-products-product"><a href="#">Заказ виртуальной карты</a></li>
-                                <li class="catalog-products-product"><a href="#">Заказ карт с индивидуальным дизайном</a></li>
-                                <li class="catalog-products-product"><a href="#">Заказать кредитную карту</a></li>
-                                <li class="catalog-products-product"><a href="#">Заявка на дебетовую карту</a></li>
-                                <li class="catalog-products-product"><a href="#">Информация по карте</a></li>
-                                <li class="catalog-products-product"><a href="#">Отображение статуса доставки карты</a></li>
-                                <li class="catalog-products-product"><a href="#">Персональные лимиты</a></li>
-                                <li class="catalog-products-product"><a href="#">Последние операции</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Графическая выписка</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Досрочный перевыпуск карты</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Заказ виртуальной карты</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Заказ карт с индивидуальным дизайном</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Заказать кредитную карту</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Заявка на дебетовую карту</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Информация по карте</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Отображение статуса доставки карты</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Персональные лимиты</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Последние операции</a></li>
                             </ul>
                         </div>
                         <div
@@ -267,15 +274,15 @@
                             id="catalog-product-tab-3"
                             aria-labelledby="catalog-product-3"
                         >
-                            <a class="catalog-product-title" href="#">Кредиты</a>
+                            <a class="catalog-product-title" data-insearch href="#">Кредиты</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Автокредитование</a></li>
-                                <li class="catalog-products-product"><a href="#">Взять кредит в Сбербанке</a></li>
-                                <li class="catalog-products-product"><a href="#">Заявка на потребительский кредит</a></li>
-                                <li class="catalog-products-product"><a href="#">Кредитная история</a></li>
-                                <li class="catalog-products-product"><a href="#">Кредитный потенциал</a></li>
-                                <li class="catalog-products-product"><a href="#">Информации о долге по овердрафту</a></li>
-                                <li class="catalog-products-product"><a href="#">Расширенная заявка на кредит</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Автокредитование</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Взять кредит в Сбербанке</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Заявка на потребительский кредит</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Кредитная история</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Кредитный потенциал</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Информации о долге по овердрафту</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Расширенная заявка на кредит</a></li>
                             </ul>
                         </div>
                         <div
@@ -284,16 +291,16 @@
                             id="catalog-product-tab-4"
                             aria-labelledby="catalog-product-4"
                         >
-                            <a class="catalog-product-title" href="#">Госуслуги</a>
+                            <a class="catalog-product-title" data-insearch href="#">Госуслуги</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Виды и размеры пенсий</a></li>
-                                <li class="catalog-products-product"><a href="#">Выписка о состоянии индивидуального лицевого счета</a></li>
-                                <li class="catalog-products-product"><a href="#">Заявка на получение выписки из ПФР</a></li>
-                                <li class="catalog-products-product"><a href="#">Перевод накопительной части пенсии в НПФ Сбербанка</a></li>
-                                <li class="catalog-products-product"><a href="#">Подать налоговую декларацию</a></li>
-                                <li class="catalog-products-product"><a href="#">Получить в ФНС справку 2НДФЛ</a></li>
-                                <li class="catalog-products-product"><a href="#">Получить налоговый вычет</a></li>
-                                <li class="catalog-products-product"><a href="#">Узнать и оплатить налоговые начисления</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Виды и размеры пенсий</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Выписка о состоянии индивидуального лицевого счета</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Заявка на получение выписки из ПФР</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Перевод накопительной части пенсии в НПФ Сбербанка</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Подать налоговую декларацию</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Получить в ФНС справку 2НДФЛ</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Получить налоговый вычет</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Узнать и оплатить налоговые начисления</a></li>
                             </ul>
                         </div>
                         <div
@@ -302,9 +309,9 @@
                             id="catalog-product-tab-5"
                             aria-labelledby="catalog-product-5"
                         >
-                            <a class="catalog-product-title" href="#">Страхование</a>
+                            <a class="catalog-product-title" data-insearch href="#">Страхование</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Витрина страховок</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Витрина страховок</a></li>
                             </ul>
                         </div>
                         <div
@@ -313,11 +320,11 @@
                             id="catalog-product-tab-6"
                             aria-labelledby="catalog-product-6"
                         >
-                            <a class="catalog-product-title" href="#">Инвестиции</a>
+                            <a class="catalog-product-title" data-insearch href="#">Инвестиции</a>
                             <ul class="catalog-products-list">
-                                <li class="catalog-products-product"><a href="#">Брокерское обслуживание</a></li>
-                                <li class="catalog-products-product"><a href="#">Металлические счета</a></li>
-                                <li class="catalog-products-product"><a href="#">Открытие обезличенного металлического счета</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Брокерское обслуживание</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Металлические счета</a></li>
+                                <li class="catalog-products-product"><a href="#" data-insearch>Открытие обезличенного металлического счета</a></li>
                             </ul>
                         </div>
                     </div>

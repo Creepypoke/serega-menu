@@ -134,14 +134,17 @@
 
     window.addEventListener('keyup', function(e) {
         if (productsDashboard.className !== 'dashboard hidden' && e.keyCode === keys.esc) {
-            console.log(e.keyCode)
             closeDashboard()
         }
     })
-
-    forEach(tabsList, function(element) {
-        addClickListener(element, function() { activeTab(element) })
-    })
+    
+    for (var index = 0; index < tabsList.length; index += 1) {
+        var element = tabsList.item(index)
+        addClickListener(element, function(element, index) {
+            activeTab(element)
+            currentTab = index
+        }.bind(this, element, index)) // TODO Oh Lord, forgive me
+    }
 
     tabListWrapper.addEventListener('keyup', changeTabFocus)
     
@@ -152,7 +155,7 @@
         
         forEach(productsTitles, function(title, index) {
             var isFounded = title.search(matched)
-            productsTitleElements[index].className = isFounded !== -1 ? '' : 'hidden'
+            productsTitleElements[index].parentNode.className = isFounded !== -1 ? 'catalog-products-product' : 'catalog-products-product disabled'
         })
 
     })
